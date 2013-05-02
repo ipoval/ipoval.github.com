@@ -15,46 +15,25 @@ jQuery(function($) {
     }
   }
 
-  var draw_logo = function () {
-    var context = get_canvas_context('my_logo');
-    if (!context) { return false; }
-
-    context.fillStyle = "rgb(200, 0, 0)";
-    context.fillRect(10, 10, 100, 100);
-    context.fillStyle = "rgb(0, 200, 0)";
-    context.fillRect(20, 20, 100, 100);
-    context.fillStyle = "rgb(0, 0, 200)";
-    context.fillRect(30, 30, 100, 100);
-
-    context.font = 'italic 16px sans-serif';
-    context.fillStyle = "rgb(0, 0, 0)";
-    context.textBaseline = 'top';
-    context.fillText('ipoval', 20, 0);
-
-    var gradient = context.createLinearGradient(0, 0, 0, 40);
-    gradient.addColorStop(0, '#000');
-    gradient.addColorStop(1, '#f00');
-    context.fillStyle = gradient;
-    context.strokeStyle = gradient;
-
-    context.lineWidth = 2;
-    context.beginPath();
-    context.moveTo(0, 40);
-    context.lineTo(30, 0);
-    context.lineTo(60, 40);
-    context.lineTo(285, 40);
-
-    context.stroke();
-    context.closePath();
-  }
-
-  draw_logo();
-
   // Page events
-  $('#contact, #resumeblock, #passionblock').on('mouseover', function() {
+  $('#contact, #resumeblock, #passionblock, #project_planner, #tweeter_feed').on('mouseover', function() {
     $(this).addClass('light_section').css('cursor', 'wait');
   }).on('mouseleave', function() {
     $(this).removeClass('light_section');
   })
-  //
-})
+
+  // Twitter widget
+  var change_twr_summary = function() {
+    var twr_frame = document.getElementById('twitter-widget-0');
+    if (twr_frame) {
+      var twr_document = twr_frame.contentWindow.document;
+      var twr_summary = $(twr_document.querySelector('h1.summary'));
+      var el = twr_summary.find('a');
+      if (el.text() == 'Thoughts out loud') { window.clearInterval(twr_interval); }
+      el.text('Thoughts out loud');
+      el.css('font-size', '14px');
+      console.log('change_twr_summary interval...');
+    }
+  }
+  twr_interval = setInterval(change_twr_summary, 100);
+});
