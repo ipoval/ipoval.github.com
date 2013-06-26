@@ -17,7 +17,7 @@ jQuery(function($) {
 
   // Page events
   $('#contact, #resumeblock, #passionblock, #project_planner, #tweeter_feed').on('mouseover', function() {
-    $(this).addClass('light_section').css('cursor', 'wait');
+    $(this).addClass('light_section');
   }).on('mouseleave', function() {
     $(this).removeClass('light_section');
   })

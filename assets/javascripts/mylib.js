@@ -8,7 +8,7 @@ jQuery.fn.submitOnCheck = function() {
 }
 
 // String monkepatches
-
+//
 // "string".trim
 //
 if (!String.prototype.trim) {
@@ -24,5 +24,5 @@ if (!String.prototype.word_count) {
     return this.split(/\s+/).length;
   }
 }
-
+//
 // \String monkepatches
