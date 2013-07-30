@@ -21,7 +21,7 @@ uploading_files = git_log.split($/).compact.reject(&:empty?)
 
 uploading_files.each do |f|
   path = f.sub('ipova.s3-website-us-west-1.amazonaws.com/', '')
-  bucket.objects[path].write Pathname.new(path)
+  bucket.objects[path].write Pathname.new(path) if Pathname.new(path).exist?
 end
 
 end
