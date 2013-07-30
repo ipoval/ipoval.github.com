@@ -1,14 +1,15 @@
-// ----------------------------------------------------- APP
-h1 {
+/* ----------------------------------------------------- APP */
+h1:first-of-type {
   margin:0;
   color:#6ead1a;
   text-shadow:2px 2px 2px #bbb;
   font-size:3.5em;
   font-weight:normal;
 }
-  h1 + p {
+  h1:first-of-type + p {
     padding:10px 0 0;
     font-size:1.8em;
+    color:#6ead1a;
   }
 
 .hero-unit {
@@ -96,8 +97,9 @@ footer {
     font-size:12px;
   }
 
-// ----------------------------------------------------- PRINT
+/* ----------------------------------------------------- PRINT */
 a:after{content: " (" attr(href) ") "}
 
-// ----------------------------------------------------- CODE PRETTIFY
-.pln{color:#000}@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{padding:2px;border:1px solid #888}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
+/* ----------------------------------------------------- CODE PRETTIFY */
+.pln{color:#000}
+@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{padding:2px;border:1px solid #888}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
