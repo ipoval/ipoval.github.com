@@ -98,7 +98,7 @@ footer {
   }
 
 /* ----------------------------------------------------- PRINT */
-a:after{content: " (" attr(href) ") "}
+/* a:after{content: " (" attr(href) ") "} */
 
 /* ----------------------------------------------------- CODE PRETTIFY */
 .pln{color:#000}
