@@ -3,13 +3,14 @@ h1:first-of-type {
   margin: 0;
   padding: 0;
   color: #6ead1a;
-  font: normal 3em 'Just Me Again Down Here', 'Verdana', serif, cursive;
+  font-family: 'Just Me Again Down Here', 'Verdana', serif, cursive;
   text-shadow: 2px 2px 2px #bbb;
 }
   h1:first-of-type + p {
     padding: 0;
     color: #6ead1a;
-    font: 1.8em 'Just Me Again Down Here', 'Verdana', serif, cursive;
+    font-size: 2em;
+    font-family: 'Just Me Again Down Here', 'Verdana', serif, cursive;
   }
 
 .jumbotron {
