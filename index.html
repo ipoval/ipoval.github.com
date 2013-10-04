@@ -198,7 +198,8 @@
 
       var timer = setInterval(function() {
         var random_section = getRandomSideBarSection();
-        random_section.css({'-webkit-transform': 'rotate(-' + Math.floor(Math.random() * 10); + 'deg)'});
+        var deg = Math.floor(Math.random() * 10);
+        random_section.css({'-webkit-transform': 'rotate(-' + deg + 'deg)'});
       }, 1000);
     });
     </script>
