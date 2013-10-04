@@ -187,6 +187,22 @@
     <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <script src="http://getbootstrap.com/examples/offcanvas/offcanvas.js"></script>
 
+    <script type="text/javascrip">
+    jQuery(function($) {
+      var side_bar_sections = $('div.sidebar-nav .ip-nav-header');
+      var side_bar_section_count = side_bar_sections.size();
+      var getRandomSideBarSection = function() {
+        var n = Math.floor(Math.random() * (side_bar_section_count + 1)); // random 0 - n
+        return side_bar_sections.eq(n);
+      };
+
+      var timer = setInterval(function() {
+        var random_section = getRandomSideBarSection();
+        random_section.css({'-webkit-transform': 'rotate(-' + Math.floor(Math.random() * 10); + 'deg)'});
+      }, 1000);
+    });
+    </script>
+
     <!-- AddThis Smart Layers BEGIN -->
     <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52012df744920f69"></script>
