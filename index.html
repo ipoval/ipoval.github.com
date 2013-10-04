@@ -189,18 +189,22 @@
 
     <script type="text/javascrip">
     jQuery(function($) {
-      var side_bar_sections = $('div.sidebar-nav .ip-nav-header');
-      var side_bar_section_count = side_bar_sections.size();
-      var getRandomSideBarSection = function() {
-        var n = Math.floor(Math.random() * (side_bar_section_count + 1)); // random 0 - n
-        return side_bar_sections.eq(n);
+      function animateSideBar() {
+        var side_bar_sections = $('div.sidebar-nav .ip-nav-header');
+        var side_bar_section_count = side_bar_sections.size();
+        var getRandomSideBarSection = function() {
+          var n = Math.floor(Math.random() * (side_bar_section_count + 1)); // random 0 - n
+          return side_bar_sections.eq(n);
+        };
+
+        var timer = setInterval(function() {
+          var random_section = getRandomSideBarSection();
+          var deg = Math.floor(Math.random() * 10);
+          random_section.css({'-webkit-transform': 'rotate(-' + deg + 'deg)'});
+        }, 1000);
       };
 
-      var timer = setInterval(function() {
-        var random_section = getRandomSideBarSection();
-        var deg = Math.floor(Math.random() * 10);
-        random_section.css({'-webkit-transform': 'rotate(-' + deg + 'deg)'});
-      }, 1000);
+      animateSideBar();
     });
     </script>
 
