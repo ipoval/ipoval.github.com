@@ -1,0 +1,12 @@
+{
+  "name": "Ivan Povalyukhin - Software Engineer, Web Developer",
+  "description": "@ipoval, web developer, javascript, ruby, rails, node.js | http://ipoval.com",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "icon48x48.jpeg", "128": "icon48x48.jpeg" }
+}
