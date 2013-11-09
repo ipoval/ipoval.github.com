@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "version": "0.1",
   "minimum_chrome_version": "23",
-  "name": "Ivan Povalyukhin - Software Engineer, Web Developer, JavaScript, Ruby",
+  "name": "Ivan Povalyukhin - Software Engineer",
   "description": "@ipoval, hire web developer, javascript, ruby, rails, node.js | http://ipoval.com",
   "icons": { "16": "assets/images/icon48x48.jpeg", "128": "assets/images/icon48x48.jpeg" },
   "app": {
