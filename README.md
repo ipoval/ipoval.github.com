@@ -3,7 +3,7 @@
 http://ipoval.com
 
 ### chrome app
-- add to chrome web store (https://chrome.google.com/webstore/detail/nmfpplkdkcbhediajmbhljkafnlahcda)
+https://chrome.google.com/webstore/detail/ivan-povalyukhin-software/ffgdigaikalajhlpcpbcfjhokjhhecah
 
 ![screenshot](https://raw.github.com/ipoval/ipoval.github.io/master/chromeapp/assets/images/screenshot.png)
 
