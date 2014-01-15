@@ -15,6 +15,11 @@ jQuery(function($) {
     }
   }
 
+  $('a.navbar-brand').click(function() {
+    var to = $(this).attr('href');
+    $('html, body').animate({ scrollTop: $(to).offset().top + 50 }, 800);
+  });
+
   // Page events
   $('#contact, #resumeblock, #passionblock, #project_planner, #tweeter_feed').on('mouseover', function() {
     $(this).addClass('light_section');
