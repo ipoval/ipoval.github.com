@@ -11,7 +11,8 @@ require 'aws'
 PHOTOS_S3_BUCKET_NAME = 'photos.ipoval.com'
 
 AWS.config(logger: Logger.new($stdout), log_level: :debug)
-s3 = AWS::S3.new(access_key_id: 'AKIAI42GB3TAHPEU2VWA', secret_access_key: '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')
+fail KeyError.new 'requires AWS credentials'
+s3 = AWS::S3.new(access_key_id: '', secret_access_key: '')
 
 bucket = s3.buckets[PHOTOS_S3_BUCKET_NAME]
 
