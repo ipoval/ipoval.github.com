@@ -1,4 +1,9 @@
 /* ----------------------------------------------------- APP */
+
+.navbar { background-color: rgba(248,248,248,0.7); }
+.navbar:hover { background-color: rgba(248,248,248,1); }
+.navbar + .container { margin-top: 20px; }
+
 h1:first-of-type {
   margin: 0;
   padding: 0;
