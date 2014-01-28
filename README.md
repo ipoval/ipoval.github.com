@@ -1,4 +1,4 @@
-### Software Engineer, Web Developer, JavaScript, Ruby
+### Software Engineer, Web Developer, JavaScript, Ruby, MongoDB, Linux, DevOps
 
 http://ipoval.com
 
