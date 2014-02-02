@@ -19,6 +19,7 @@ h1:first-of-type {
   }
 
 .jumbotron {
+  background-color: rgba(248, 248, 248, 0.70);
   padding: 0 0 5px;
   box-shadow: 5px 5px 5px #333;
   -webkit-box-shadow: 5px 5px 5px #333;
@@ -28,6 +29,7 @@ h1:first-of-type {
 
 .well {
   margin-bottom: 0px;
+  background-color: rgba(248, 248, 248, 0.70);
 }
 
 .sidebar-nav li a {
