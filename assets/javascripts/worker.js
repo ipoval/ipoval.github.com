@@ -12,7 +12,7 @@
   };
 
   var getRandom = function(randomMax) {
-    return Math.floor(Math.rand() * randomMax);
+    return Math.floor(Math.random() * randomMax);
   };
 
   var getYoutubeResults = function(query) {
