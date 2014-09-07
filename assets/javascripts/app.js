@@ -23,17 +23,20 @@ jQuery(function($) {
   })
 
   // Twitter widget
-  var change_twr_summary = function() {
-    var twr_frame = document.getElementById('twitter-widget-0');
-    if (twr_frame) {
-      var twr_document = twr_frame.contentWindow.document;
-      var twr_summary = $(twr_document.querySelector('h1.summary'));
-      var el = twr_summary.find('a');
-      if (el.text() == 'Thoughts out loud') { window.clearInterval(twr_interval); }
+  var changeTwitterFeedSummary = function() {
+    this.callCount = this.callCount || 0;
+    this.callCount++;
+
+    var feedFrame = document.getElementById('twitter-widget-0');
+    if (feedFrame) {
+      var twr_document = feedFrame.contentWindow.document,
+        twr_summary = $(twr_document.querySelector('h1.summary')),
+        el = twr_summary.find('a');
+
+      if (el.text() == 'Thoughts out loud') { window.clearInterval(changeTwitterFeedSummaryTimer); }
       el.text('Thoughts out loud');
       el.css('font-size', '14px');
-      console.log('change_twr_summary interval...');
     }
   }
-  twr_interval = setInterval(change_twr_summary, 100);
+  changeTwitterFeedSummaryTimer = setInterval(changeTwitterFeedSummary, 100);
 });
