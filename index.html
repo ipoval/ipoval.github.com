@@ -192,7 +192,7 @@
 
         var worker = new Worker('assets/javascripts/worker.js');
         worker.onmessage = function(event) {
-          console.dir(even.data);
+          console.dir(event.data);
         };
         worker.onerror = function(event) {
           console.dir(event);
