@@ -12,6 +12,7 @@
   };
 
   var getRandom = function(randomMax) {
+    // random 0..n
     return Math.floor(Math.random() * randomMax);
   };
 

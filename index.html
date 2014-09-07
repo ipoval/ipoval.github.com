@@ -187,35 +187,33 @@
     <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <script src="http://getbootstrap.com/examples/offcanvas/offcanvas.js"></script>
     <script type="text/javascript">
-      (function animateSideBar() {
+      (function animateSidebar() {
         'use strict';
 
-        var worker = new Worker('assets/javascripts/worker.js');
+        var sidebarSections = $('div.sidebar-nav .ip-nav-header'),
+          worker = new Worker('assets/javascripts/worker.js');
+
         worker.onmessage = function(event) {
-          console.dir(event.data);
+          this.callCount = this.callCount || 0;
+          this.callCount++;
+          console.dir(event.data); console.dir(this.callCount);
+
+          var deg = event.data.randomNum2,
+            randomSidebar = sidebarSections.eq(event.data.randomNum1);
+
+          randomSidebar.css({
+            '-webkit-transform': 'rotate(-' + deg + 'deg)',
+            '-moz-transform': 'rotate(-' + deg + 'deg)',
+            'transform': 'rotate(-' + deg + 'deg)',
+          });
         };
         worker.onerror = function(event) {
           console.dir(event);
         };
 
-        var sideBarSections = $('div.sidebar-nav .ip-nav-header'),
-
-          getRandomSideBarSection = function() {
-            var n = Math.floor(Math.random() * (sideBarSections.size() + 1)); // random 0 - n
-            return sideBarSections.eq(n);
-          };
-
         setInterval(function() {
           worker.postMessage({ randomMax: sideBarSections.size() + 1 });
-
-          var deg = Math.floor(Math.random() * 10);
-
-          getRandomSideBarSection().css({
-            '-webkit-transform': 'rotate(-' + deg + 'deg)',
-            '-moz-transform': 'rotate(-' + deg + 'deg)',
-            'transform': 'rotate(-' + deg + 'deg)',
-          });
-        }, 1000);
+        }, 1500);
       })();
     </script>
     <!-- AddThis Smart Layers BEGIN -->
