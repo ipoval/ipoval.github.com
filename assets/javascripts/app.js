@@ -2,12 +2,6 @@ jQuery(function($) {
   // google-code-prettify
   prettyPrint();
 
-  var IpovalGeolocation = {
-    current_position: function() {
-    }
-  };
-  IpovalGeolocation.current_position();
-
   var get_canvas_context = function(node_id) {
     var canv = document.getElementById(node_id);
     if (canv && canv.getContext) {
