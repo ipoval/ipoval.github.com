@@ -11,10 +11,10 @@
       url = 'http://gdata.youtube.com/feeds/videos?vq=' + query + '&alt=json-in-script&max-results=5&callback=' + callback;
 
     // worker has a utility function to requrest local, relative and remote urls
-    importScripts(url);
+    self.importScripts(url);
   };
 
   var processResults = function(asJson) {
-    postMessage(asJson);
+    self.postMessage(asJson);
   };
 }(this));
