@@ -191,30 +191,31 @@
         'use strict';
 
         var worker = new Worker('assets/javascripts/worker.js');
+        worker.onmessage = function(event) {
+          console.dir(even.data);
+        };
+        worker.onerror = function(event) {
+          console.dir(event);
+        };
 
         var sideBarSections = $('div.sidebar-nav .ip-nav-header'),
+
           getRandomSideBarSection = function() {
             var n = Math.floor(Math.random() * (sideBarSections.size() + 1)); // random 0 - n
             return sideBarSections.eq(n);
           };
 
         setInterval(function() {
-          worker.postMessage('gerchik webinars');
+          worker.postMessage({ randomMax: sideBarSections.size() + 1 });
 
           var deg = Math.floor(Math.random() * 10);
+
           getRandomSideBarSection().css({
             '-webkit-transform': 'rotate(-' + deg + 'deg)',
             '-moz-transform': 'rotate(-' + deg + 'deg)',
             'transform': 'rotate(-' + deg + 'deg)',
           });
         }, 1000);
-
-        worker.onmessage = function(event) {
-          console.dir(event);
-        };
-        worker.onerror = function(event) {
-          console.dir(event);
-        };
       })();
     </script>
     <!-- AddThis Smart Layers BEGIN -->

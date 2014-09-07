@@ -2,8 +2,17 @@
   'use strict';
 
   self.onmessage = function(event) {
-    var query = event.data;
-    getYoutubeResults(query);
+    self.postMessage({
+      randomNum1: getRandom(event.data.randomMax),
+      randomNum2: getRandom(10)
+    });
+
+    // var query = event.data;
+    // getYoutubeResults(query);
+  };
+
+  var getRandom = function(randomMax) {
+    return Math.floor(Math.rand() * randomMax);
   };
 
   var getYoutubeResults = function(query) {
@@ -14,7 +23,8 @@
     self.importScripts(url);
   };
 
-  var processResults = function(asJson) {
+  var processYoutubeResults = function(asJson) {
+    // basic stub
     self.postMessage(asJson);
   };
 }(this));
