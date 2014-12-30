@@ -15,14 +15,19 @@ jQuery(function($) {
     return false;
   });
 
-  // Page events
+  /*
+   * Events
+   */
   $('#contact, #resumeblock, #passionblock, #project_planner, #tweeter_feed').on('mouseover', function() {
     $(this).addClass('light_section');
   }).on('mouseleave', function() {
     $(this).removeClass('light_section');
   })
 
-  // Twitter widget
+  /*
+   * Twitter widget
+   *   recursive setTimeout pattern
+   */
   var changeTwitterFeedSummary = function() {
     this.callCount = this.callCount || 0;
     this.callCount++;
@@ -33,10 +38,15 @@ jQuery(function($) {
         twr_summary = $(twr_document.querySelector('h1.summary')),
         el = twr_summary.find('a');
 
-      if (el.text() == 'Thoughts out loud') { window.clearInterval(changeTwitterFeedSummaryTimer); }
-      el.text('Thoughts out loud');
-      el.css('font-size', '14px');
+      if (el.text() == 'Thoughts out loud') {
+        window.clearTimeout(changeTwitterFeedSummaryTimer);
+      } else {
+        el.text('Thoughts out loud');
+        el.css('font-size', '14px');
+        setTimeout(changeTwitterFeedSummary, 100)
+      }
     }
   }
-  changeTwitterFeedSummaryTimer = setInterval(changeTwitterFeedSummary, 100);
+  changeTwitterFeedSummaryTimer = setTimeout(changeTwitterFeedSummary, 100);
+
 });
