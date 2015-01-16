@@ -49,4 +49,22 @@ jQuery(function($) {
   }
   changeTwitterFeedSummaryTimer = setTimeout(changeTwitterFeedSummary, 100);
 
+  /*
+   * delayed api request to search geolocation based on latitude and longitude
+   */
+  var getCurrentGeolocation = function() {
+    if (! navigator.geolocation) { return; }
+    navigator.geolocation.getCurrentPosition(whenHavePosition);
+
+    function whenHavePosition(position) {
+      $.get('https://ipovalbackend.herokuapp.com/geolocations/current', { latitude: position.coords.latitude, longitude: position.coords.longitude }, function(data) {
+        console.dir(data);
+        if (data.location) {
+          $('#current-geolocation-area').html('how is the weather like in ' + data.location).hide().slideDown(5000);
+        }
+      });
+    }
+  };
+  setTimeout(getCurrentGeolocation, 7000);
+
 });
