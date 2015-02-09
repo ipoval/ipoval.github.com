@@ -7,7 +7,7 @@ jQuery(function($) {
     if (canv && canv.getContext) {
       return canv.getContext('2d');
     }
-  }
+  };
 
   $('a.navbar-brand').click(function() {
     var to = $(this).attr('href');
@@ -43,10 +43,11 @@ jQuery(function($) {
       } else {
         el.text('Thoughts out loud');
         el.css('font-size', '14px');
-        setTimeout(changeTwitterFeedSummary, 100)
+        setTimeout(changeTwitterFeedSummary, 100);
       }
     }
-  }
+  };
+
   changeTwitterFeedSummaryTimer = setTimeout(changeTwitterFeedSummary, 100);
 
   /*
