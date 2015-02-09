@@ -1,21 +1,23 @@
 /* ----------------------------------------------------- APP */
-
 .navbar { background-color: rgba(248,248,248,0.7); }
 .navbar:hover { background-color: rgba(248,248,248,1); }
 .navbar + .container { margin-top: 20px; }
+.navbar-brand { font-size: 2em; }
+
+.font_handsome {
+  color: #6ead1a !important;
+  font-family: 'Just Me Again Down Here', 'Verdana', serif, cursive;
+  text-shadow: 5px 5px 5px #bbb;
+}
 
 h1:first-of-type {
   margin: 0;
   padding: 0;
-  color: #6ead1a;
-  font-family: 'Just Me Again Down Here', 'Verdana', serif, cursive;
-  text-shadow: 2px 2px 2px #bbb;
+  font-size: 2.5em;
 }
   h1:first-of-type + p {
     padding: 0;
-    color: #6ead1a;
     font-size: 2em;
-    font-family: 'Just Me Again Down Here', 'Verdana', serif, cursive;
   }
 
 .jumbotron {

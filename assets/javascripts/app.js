@@ -2,8 +2,8 @@ jQuery(function($) {
   // google-code-prettify
   prettyPrint();
 
-  var get_canvas_context = function(node_id) {
-    var canv = document.getElementById(node_id);
+  var getCanvasContext = function(nodeId) {
+    var canv = document.getElementById(nodeId);
     if (canv && canv.getContext) {
       return canv.getContext('2d');
     }
@@ -18,11 +18,11 @@ jQuery(function($) {
   /*
    * Events
    */
-  $('#contact, #resumeblock, #passionblock, #project_planner, #tweeter_feed').on('mouseover', function() {
+  $('#contact, #passionblock').on('mouseover', function() {
     $(this).addClass('light_section');
   }).on('mouseleave', function() {
     $(this).removeClass('light_section');
-  })
+  });
 
   /*
    * Twitter widget
@@ -60,7 +60,7 @@ jQuery(function($) {
       $.get('https://ipovalbackend.herokuapp.com/geolocations/current', { latitude: position.coords.latitude, longitude: position.coords.longitude }, function(data) {
         console.dir(data);
         if (data.location) {
-          $('#current-geolocation-area').html('how is the weather like in ' + data.location).hide().slideDown(5000);
+          $('#current-geolocation-area').html('how is the weather like in ' + data.location).hide().slideDown(3000);
         }
       });
     }
