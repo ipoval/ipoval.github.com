@@ -2,8 +2,8 @@
 # The humans responsible & technology colophon
 
 # TEAM
-
-    Ivan Povalyukhin -- Software Engineer -- @ipoval
+    http://ipoval.com
+    Ivan Povalyukhin ** Software Engineer ** @ipoval
 
 # THANKS
 
