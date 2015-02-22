@@ -52,6 +52,10 @@ h1:first-of-type {
   -ms-transform: rotate(-2deg);
 }
 
+.aside\:right sub {
+  float: right;
+}
+
 .light_section {
   padding-left: 10px;
   border: 1px solid rgba(0, 0, 0, 0.5);
