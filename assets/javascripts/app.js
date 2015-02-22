@@ -1,6 +1,25 @@
 jQuery(function($) {
-  // google-code-prettify
-  prettyPrint();
+  var FontViewController = {
+    apply: function() {
+      /* google-code-prettify */
+      prettyPrint();
+
+      this.setAsideRightNavFont();
+    },
+
+    get rightListFontSize() {
+      return this.asideRightFontSize;
+    },
+    set rightListFontSize(val) {
+      this.asideRightFontSize = val;
+    },
+
+    setAsideRightNavFont: function() {
+      $('.aside\\:right')[0].style.fontSize = this.rightListFontSize;
+    }
+  };
+  FontViewController.rightListFontSize = '12px';
+  FontViewController.apply();
 
   var getCanvasContext = function(nodeId) {
     var canv = document.getElementById(nodeId);
