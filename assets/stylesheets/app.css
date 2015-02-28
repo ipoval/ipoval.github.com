@@ -115,4 +115,5 @@ h1:first-of-type {
   h1:first-of-type { font-size: 24px; }
   h1:first-of-type + p { font-size: 16px; }
   .jumbotron p { margin-bottom: 5px; }
+  .well { padding: 8px; }
 }
