@@ -1,4 +1,8 @@
+if (typeof jQuery === 'undefined') { throw new Error('require jQuery library') }
+
 jQuery(function($) {
+  'use strict';
+
   var FontViewController = {
     apply: function() {
       /* google-code-prettify */
