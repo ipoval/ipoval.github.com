@@ -48,10 +48,10 @@ jQuery(function($) {
   });
 
   /*
-   * Twitter widget
-   *   recursive setTimeout pattern
+   * Twitter widget - recursive setTimeout pattern
    */
-  var changeTwitterFeedSummary = function() {
+  var changeTwitterFeedSummaryTimer,
+    changeTwitterFeedSummary = function() {
     this.callCount = this.callCount || 0;
     this.callCount++;
 
@@ -70,7 +70,6 @@ jQuery(function($) {
       }
     }
   };
-
   changeTwitterFeedSummaryTimer = setTimeout(changeTwitterFeedSummary, 100);
 
   /*
