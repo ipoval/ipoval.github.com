@@ -22,17 +22,19 @@ h1:first-of-type {
   }
 
 .jumbotron {
-  background-color: rgba(248, 248, 248, 0.70);
   padding: 4px 0 5px;
-  box-shadow: 5px 5px 5px #333;
-  -webkit-box-shadow: 5px 5px 5px #333;
-  -moz-box-shadow: 5px 5px 5px #333;
+  background-color: rgba(248, 248, 248, 0.70);
+  box-shadow: 3px 3px 1px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 3px 3px 1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 3px 3px 1px rgba(0,0,0,0.5);
   text-align: center;
 }
 
 .well {
   margin-bottom: 0px;
+  border: none;
   background-color: rgba(248, 248, 248, 0.70);
+  box-shadow: 3px 3px 1px rgba(0,0,0,0.5);
 }
 
 .sidebar-nav li a {
