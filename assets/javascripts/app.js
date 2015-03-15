@@ -65,7 +65,7 @@ jQuery(function($) {
         window.clearTimeout(changeTwitterFeedSummaryTimer);
       } else {
         el.text('Thoughts out loud');
-        el.css('font-size', '14px');
+        el.css({"font-size": "12px", "font-weight": "normal"});
         setTimeout(changeTwitterFeedSummary, 100);
       }
     }
