@@ -212,6 +212,12 @@ footer .copy {
   }
 }
 
+@media screen and (max-width: 767px) {
+  #first-content-row .col-6:nth-child(3) {
+    padding-top:12px;
+  }
+}
+
 @media screen and (min-width: 700px) and (orientation: landscape) {
   #feed\:main {
     padding: 0 30px 0 0;
