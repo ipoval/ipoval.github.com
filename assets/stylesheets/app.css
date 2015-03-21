@@ -206,8 +206,9 @@ footer .copy {
     padding-left: 42px;
   }
   footer {
+    padding-top: 10px;
+    margin-bottom: 50px;
     font-size: 16px;
-    margin-bottom: 30px;
   }
 }
 
