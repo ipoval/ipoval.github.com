@@ -59,6 +59,11 @@ footer {
 }
 
 /* ----------------------------------------------------- APP */
+.text-muted { color: #bcbbbb; }
+.text-thin { font-weight: 300 !important; }
+.text-color-var1 { color: #f8981c; }
+.text-color-var2 { color: #747704; }
+
 @font-face {
   font-family: 'iPovalFont'; /* https://fbf8.com/ */
   src: url('https://d29ewpiyynpjsc.cloudfront.net/fonts/Polaris-Book-f1016e63.woff');
@@ -71,12 +76,12 @@ body {
 .navbar { background-color: rgba(248,248,248,0.7); }
 .navbar:hover { background-color: rgba(248,248,248,1); }
 .navbar + .container { margin-top: 20px; }
-.navbar-brand { font-size: 2em; }
+.title-logo { font-size: 1.8em; }
 
 .font_handsome {
   color: rgba(73, 108, 26, 0.8) !important;
   font-family: 'Just Me Again Down Here', 'Verdana', serif, cursive;
-  text-shadow: 4px 4px 3px #bbb;
+  text-shadow: 3px 2px 2px #bcbbbb;
 }
 
 h1:first-of-type {
