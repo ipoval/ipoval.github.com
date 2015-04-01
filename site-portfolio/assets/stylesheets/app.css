@@ -68,6 +68,7 @@ a:hover, a:focus {
 }
 
 footer {
+  padding: 40px 0 10px;
   background-color: #252525;
   font-size: 12px;
 }
