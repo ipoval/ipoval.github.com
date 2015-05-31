@@ -1,4 +1,11 @@
-if (typeof jQuery === 'undefined') { throw new Error('require jQuery library') }
+if (typeof jQuery === 'undefined') { throw new Error('require jQuery library'); }
+
+/* inline http://getbootstrap.com/examples/offcanvas/offcanvas.js to avoid send request for this asset */
+$(document).ready(function () {
+  $('[data-toggle="offcanvas"]').click(function () {
+    $('.row-offcanvas').toggleClass('active')
+  });
+});
 
 jQuery(function($) {
   'use strict';
