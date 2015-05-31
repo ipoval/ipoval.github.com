@@ -55,31 +55,6 @@ jQuery(function($) {
   });
 
   /*
-   * Twitter widget - recursive setTimeout pattern
-   */
-  var changeTwitterFeedSummaryTimer,
-    changeTwitterFeedSummary = function() {
-    this.callCount = this.callCount || 0;
-    this.callCount++;
-
-    var feedFrame = document.getElementById('twitter-widget-0');
-    if (feedFrame) {
-      var twr_document = feedFrame.contentWindow.document,
-        twr_summary = $(twr_document.querySelector('h1.summary')),
-        el = twr_summary.find('a');
-
-      if (el.text() == 'Thoughts out loud') {
-        window.clearTimeout(changeTwitterFeedSummaryTimer);
-      } else {
-        el.text('Thoughts out loud');
-        el.css({"font-size": "12px", "font-weight": "normal"});
-        setTimeout(changeTwitterFeedSummary, 100);
-      }
-    }
-  };
-  changeTwitterFeedSummaryTimer = setTimeout(changeTwitterFeedSummary, 100);
-
-  /*
    * delayed api request to search geolocation based on latitude and longitude
    */
   var getCurrentGeolocation = function() {
