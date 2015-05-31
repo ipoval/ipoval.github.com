@@ -12,9 +12,6 @@ jQuery(function($) {
 
   var FontViewController = {
     apply: function() {
-      /* google-code-prettify */
-      prettyPrint();
-
       this.setAsideRightNavFont();
     },
 
