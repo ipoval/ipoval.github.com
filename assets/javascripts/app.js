@@ -45,7 +45,7 @@ jQuery(function($) {
   /*
    * Events
    */
-  $('#contact, #passionblock').on('mouseover', function() {
+  $('#contact, #passionblock').on('mouseenter', function() {
     $(this).addClass('light_section');
   }).on('mouseleave', function() {
     $(this).removeClass('light_section');
