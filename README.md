@@ -2,9 +2,7 @@
 
 http://ipoval.com
 
-### chrome app
-https://chrome.google.com/webstore/detail/ivan-povalyukhin-software/ffgdigaikalajhlpcpbcfjhokjhhecah
-
-![screenshot](https://raw.github.com/ipoval/ipoval.github.io/master/chromeapp/assets/images/screenshot1280x800.png)
+#### OPTIMIZATIONS
+  html-minifier --collapse-whitespace index_dev.html -o index.html
 
 @ipoval
