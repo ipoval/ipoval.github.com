@@ -2,7 +2,9 @@
 
 http://ipoval.com
 
-#### OPTIMIZATIONS
+#### Optimizations
+```
   html-minifier --collapse-whitespace index_dev.html -o index.html
+```
 
 @ipoval
