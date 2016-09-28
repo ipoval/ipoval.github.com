@@ -162,24 +162,6 @@ h1:first-of-type {
     display: inline-block;
     position: relative;
   }
-  .fancy span:before,
-  .fancy span:after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    border-bottom: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-    top: 3px;
-    width: 100%;
-  }
-  .fancy span:before {
-    right: 100%;
-    margin-right: 15px;
-  }
-  .fancy span:after {
-    left: 100%;
-    margin-left: 15px;
-  }
 
 footer .copy {
   font-weight: bold;
