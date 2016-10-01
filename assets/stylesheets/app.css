@@ -180,8 +180,8 @@ footer .copy {
 /* media queries */
 @media screen and (max-width: 400px) {
   .navbar + .container { margin-top: 0px; }
-  h1:first-of-type { font-size: 24px; }
-  h1:first-of-type + p { font-size: 16px; }
+  h1:first-of-type { font-size: 1em; line-height:1.3em; }
+  h1:first-of-type + p { font-size: 0.8em; }
   .jumbotron p { margin-bottom: 5px; }
   .well { padding: 8px; }
 
