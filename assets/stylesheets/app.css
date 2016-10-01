@@ -76,7 +76,7 @@ body {
 .navbar { background-color: rgba(248,248,248,0.7); }
 .navbar:hover { background-color: rgba(248,248,248,1); }
 .navbar + .container { margin-top: 20px; }
-.title-logo { font-size: 1.8em; }
+.title-logo { font-size: 1.5em; }
 
 .font_handsome {
   color: rgba(73, 108, 26, 0.8) !important;
@@ -87,13 +87,13 @@ body {
 h1:first-of-type {
   margin: 0;
   padding: 0;
-  font-size: 1.8em;
+  font-size: 1.6em;
   line-height: 2em;
 }
   h1:first-of-type + p {
     margin-bottom: 4px;
     padding: 0;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
 .jumbotron {
@@ -144,11 +144,14 @@ h1:first-of-type {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
+#contact, #passionblock, #tweeter_feed {
+  max-width: 380px; width: 380px; margin: 0 auto;
+}
 #contact pre {
   border: none;
   background: none;
 }
-
+#resumeblock, #tweeter_feed { margin-top: 20px; }
 #resumeblock > p {
   text-align: center;
 }
