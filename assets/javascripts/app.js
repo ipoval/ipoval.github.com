@@ -119,8 +119,9 @@ jQuery(function($) {
 
   setTimeout(function() {
     loadScript('http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.js', function() {
-      $('[data-tooltip!=""]').qtip({ content: { attr: 'data-tooltip' }, style: { classes: 'qtip-bootstrap' } });
+      $('[data-tooltip!=""]').qtip({ content: { attr: 'data-tooltip' }, style: { classes: 'qtip-bootstrap' },  position: { my: 'top right', at: 'bottom left' } });
     });
+
     loadScript('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52012df744920f69', function() {
       addthis.layers({ 'theme' : 'transparent', 'share' : { 'position' : 'right', 'numPreferredServices' : 5 }, 'follow' : { 'services' : [ {'service': 'twitter', 'id': 'ipoval'}, {'service': 'linkedin', 'id': 'ipoval'} ] } });
     });
